@@ -14,6 +14,7 @@ section svg {
 #linha-horizontal {
   width: 1200px;
   border: 2px solid #851C44;
+  margin: 0 auto; /* Centraliza a linha horizontal */
 }
 
 /* Segunda seção */
@@ -35,6 +36,7 @@ section svg {
   line-height: 1.6;
 }
 
+/* Ajuste para o título ou conteúdo da segunda seção */
 #segunda {
   position: relative;
   top: -50px;
@@ -47,21 +49,21 @@ button {
   --hover-color: #E28B22;
   box-sizing: border-box;
   border: 0;
-  border-radius: 20px;
+  border-radius: 20px; /* Bordas arredondadas */
   color: var(--secondary-color);
   padding: 1em 1.8em;
   background: var(--primary-color);
   display: flex;
-  transition: 0.2s background;
+  transition: 0.2s background; /* Transição suave na cor */
   align-items: center;
   justify-content: center;
   gap: 0.6em;
   font-weight: bold;
-  margin: 0 auto;
+  margin: 0 auto; /* Centraliza o botão */
 }
 
 button:hover {
-  background-color: var(--hover-color);
+  background-color: var(--hover-color); /* Cor do botão ao passar o mouse */
 }
 
 /* Onda adicional (caso precise de mais ajustes) */
@@ -69,47 +71,148 @@ button:hover {
   position: relative;
   z-index: 1; /* Garante que a onda fique sobre o fundo */
   margin-top: -380px;
+  /* Ajuste o valor do margin-top conforme necessário para o efeito visual */
 }
 
-
-
+/* Estilos para os cabeçalhos h5 dentro de .icone-item */
 .icone-item h5 {
-  color: #851C44; /* Altere a cor para o tom desejado */
+  color: #851C44; /* Cor personalizada para cabeçalhos */
 }
 
+/* Título da seção de projetos */
 #titulo-projetos {
   color: #851C44;
 }
 
+/* Terceira seção */
 .terceira {
-  background-color: #FFF3EE;
+  background-color: #FFF3EE; /* Cor de fundo suave para a terceira seção */
 }
 
+/* Linha horizontal para a terceira seção */
 #linha-horizontal3 {
   width: 1905px;
-  border: 10px solid #E28B22;
+  border: 10px solid #E28B22; /* Linha mais grossa com cor laranja */
   position: relative;
-  top: 50px; /* Ajuste o valor conforme necessário */
+  top: 50px; /* Ajuste a posição da linha */
 }
 
+/* Linha fina separadora */
 #linha-horizontal4 {
   width: 100%;
   height: 2px;
-  background-color: #E28B22; /* A cor da linha */
-  margin:50px 0; /* Ajuste a margem para controlar o espaço em torno da linha */
+  background-color: #E28B22; /* Cor laranja */
+  margin: 50px 0; /* Margem superior e inferior */
 }
 
+/* Div fixa na parte inferior da tela */
 #div_fixa {
-  
-  position:fixed; 
-  margin:15px;
+  position: fixed;
+  margin: 15px;
   margin-top: 300px;
-  z-index:5000;
-  bottom: 0px;
-}
-.footer-custom {
-  background-color: #851C44; /* Cor personalizada */
-  padding-top: 40px;  /* Aumentar o padding superior */
-  padding-bottom: 40px;  /* Aumentar o padding inferior */
+  z-index: 5000; /* Garante que fique acima de outros elementos */
+  bottom: 0px; /* Posiciona na parte inferior */
 }
 
+/* Estilos personalizados para o rodapé */
+.footer-custom {
+  background-color: #851C44; /* Cor de fundo do rodapé */
+  padding-top: 40px;  /* Aumenta o padding superior */
+  padding-bottom: 40px;  /* Aumenta o padding inferior */
+}
+
+/* Responsividade com Media Queries */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 4rem;
+  }
+
+  /* Ajuste o padding da segunda seção */
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  #linha-horizontal {
+    width: 90%; /* A linha ocupa 90% da tela */
+  }
+
+  button {
+    padding: 1em 1.5em; /* Botão menor em telas pequenas */
+    font-size: 14px; /* Fontes menores */
+  }
+
+  /* Ajuste a onda para que não sobrecarregue em telas pequenas */
+  section svg {
+    margin-top: -150px; /* Ajusta a onda em telas pequenas */
+  }
+
+  #div_fixa {
+    margin-top: 200px; /* Ajuste para a posição do div fixa em telas pequenas */
+  }
+
+  /* Ajustar a largura da linha horizontal da terceira seção */
+  #linha-horizontal3 {
+    width: 100%;
+    border: 5px solid #E28B22;
+  }
+
+  .footer-custom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Para telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro-section {
+    padding: 6rem;
+  }
+
+  /* Ajuste o tamanho da fonte para tablets */
+  .intro-section p {
+    font-size: 1.2rem;
+  }
+
+  #linha-horizontal {
+    width: 80%;
+  }
+
+  button {
+    padding: 1em 1.6em;
+  }
+
+  #linha-horizontal3 {
+    width: 100%;
+  }
+
+  #div_fixa {
+    margin-top: 250px;
+  }
+}
+
+/* Para telas grandes (desktops) */
+@media (min-width: 1025px) {
+  .intro-section {
+    padding: 10rem;
+  }
+
+  /* Manter as configurações padrão para desktops */
+  #linha-horizontal {
+    width: 1200px;
+  }
+
+  button {
+    padding: 1em 1.8em;
+  }
+
+  /* Ajuste a largura da linha da terceira seção */
+  #linha-horizontal3 {
+    width: 1905px;
+  }
+
+  #div_fixa {
+    margin-top: 300px;
+  }
+}
